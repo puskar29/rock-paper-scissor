@@ -1,5 +1,6 @@
 let userScore = 0;
 let compScore = 0;
+let gameOver = false;
 
 let choices = document.querySelectorAll(".choice");
 
@@ -13,6 +14,7 @@ const userScorePara = document.querySelector("#user-score");
 const compScorePara = document.querySelector("#comp-score");
 const playAgainPara = document.querySelector("#play-again-btn");
 const msg = document.querySelector("#msg");
+
 const showWinner = (userWin, userChoice, compChoice) => {
     if(userWin){
         userScore++;
@@ -30,12 +32,14 @@ const showWinner = (userWin, userChoice, compChoice) => {
     if(userScore === 5){
         msg.innerText = "You reached 5! You win!";
         msg.style.background = "green";
+        gameOver = true;
         // hideScoreMsg();
         showPlayAgainBtn();
     }
     else if(compScore === 5){
         msg.innerText = "Computer reached 5! Computer Wins!";
         msg.style.background = "red";
+        gameOver = true;
         // hideScoreMsg();
         showPlayAgainBtn();
     }
@@ -47,6 +51,7 @@ const drawGame = () =>{
     msg.style.background = "rgb(5, 5, 134)";
 }
 const playGame = (userChoice) => {
+    if(gameOver) return;
     console.log("User Choice = ", userChoice);
 
     //Computer Choice
@@ -98,6 +103,7 @@ const showScoreMsg = () => {
 const resetGame = () => {
     userScore = 0;
     compScore = 0;
+    gameOver = false;
     userScorePara.innerText = userScore;
     compScorePara.innerText = compScore;
     msg.innerText = "Play Your Move!"
