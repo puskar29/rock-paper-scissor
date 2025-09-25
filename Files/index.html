@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Files/style.css">
+    <title>Game</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Let's Play Rock, Paper, Scissors</h1>
+
+        <!-- Choices -->
+        <div class="choices">
+            <div class="choice" id="rock">
+                <img src="../Asstes/rock.png" alt="rock">
+            </div>
+            <div class="choice" id="paper">
+                <img src="../Asstes/paper.png" alt="paper">
+            </div>
+            <div class="choice" id="scissor">
+                <img src="../Asstes/scissor.png" alt="scissor">
+            </div>
+        </div>
+
+        <div class="score-board">
+            <div class="score">
+                <table>
+                    <tr>
+                        <th colspan="2">Score Board</th>
+                    </tr>
+                    <tr>
+                        <td id="user-score">0</td>
+                        <td id="comp-score">0</td>
+                    </tr>
+                    <tr>
+                        <th>You</th>
+                        <th>Comp</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="msg-container">
+            <p id="msg">Play your move!</p>
+            <button id="play-again-btn">Play Again</button>
+        </div>
+    </div>
+    <script src="../Files/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+.container{
+    background-color:aliceblue;
+    padding: 100px;
+    border-radius: 40px;
+}
+h1{
+    color: rgb(5, 5, 134);
+    text-align: center;
+    line-height: 5rem;
+    height: 5rem;
+}
+
+.choice{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img{
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid black;
+}
+
+.choices{
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 5px;
+    align-items: center;
+}
+
+.choice:hover{
+    cursor: pointer;
+    background-color: rgb(4, 4, 35);
+}
+
+.score-board{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    text-align: center;
+    margin: 3rem;
+    gap: 5rem;
+    
+}
+
+.msg-container{
+    text-align: center;
+    margin: 5px;
+    padding: 10px;
+}
+
+#user-score, 
+#comp-score{
+    font-size: 4rem;
+}
+
+#msg{
+    color: white;
+    font-size: 1rem;
+    background-color: rgb(5, 5, 134);
+    display: inline;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#play-again-btn{
+    background-color: rgb(5, 5, 134);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    display: none;
+    border: 1px solid rgb(5, 5, 134);
+    font-size: 1rem;
+}
+
+table{
+    border-collapse: separate;
+    width: 100%;
+    border-spacing: 0;
+    border-radius: 10px;
+    border: 1px solid rgb(5, 5, 134);
+    overflow: hidden;
+
+}
+
+td, th{
+    border: 1px solid rgb(5, 5, 134);
+    padding: 5px;
+}
+
+tr:nth-child(even){background-color: blue;}
+
+td{
+    background-color: rgb(230, 231, 231);
+}
+th{
+    padding: 10px 20px;
+    text-align: center;
+    background-color: rgb(56, 56, 137);
+    color: white;
+}
+
